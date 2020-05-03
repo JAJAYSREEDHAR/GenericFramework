@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" verbose ="5">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="com.company.product.testcases.TC001_LoginLogOut"/>
+      <class name="com.company.product.testcases.TC002_LoginForFailure"/>
+      <class name="com.company.product.testcases.TC003_CreateLead"/>
+      <class name="com.company.product.testcases.TC004_EditLead"/>
+      <class name="com.company.product.testcases.TC005_DeleteLead"/>
+      <class name="com.company.product.testcases.TC006_DuplicateLead"/>
+      <class name="com.company.product.testcases.TC007_MergeLead"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
