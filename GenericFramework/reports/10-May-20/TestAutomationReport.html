@@ -1,0 +1,2429 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>rGUEST SEAT PRODUCT</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+				<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>ExtentReports</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>May 10, 2020 11:54:05 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button category-toggle' data-activates='category-toggle' data-constrainwidth='false' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>local_offer</i> Category
+				</a>
+				<ul id='category-toggle' class='dropdown-content'>
+					<li><a href='#'>AjioTest</a></li>
+					<li class='divider'></li>
+					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
+				</ul>
+			</div>
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='40.625%'><span class='strong'>13</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='59.375%'>19</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='74.026%'><span class='strong'>114</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='25.974%'>40</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 01:03:41 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 01:03:41 AM</span>
+	<span class='label end-time'>May 10, 2020 01:04:05 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 24s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:03:58 AM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/274278103.png" width="10%" src="./../reports/images/274278103.png" data-src="./../reports/images/274278103.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:00 AM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/368667131.png" width="10%" src="./../reports/images/368667131.png" data-src="./../reports/images/368667131.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:05 AM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 01:16:19 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 01:16:19 AM</span>
+	<span class='label end-time'>May 10, 2020 01:27:00 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 10m 41s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:16:36 AM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/856030524.png" width="10%" src="./../reports/images/856030524.png" data-src="./../reports/images/856030524.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:16:38 AM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/485715463.png" width="10%" src="./../reports/images/485715463.png" data-src="./../reports/images/485715463.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:26:58 AM</td>
+					<td class='step-details'>Unknown exception occured while finding xpath with the value //input[@placeholder='Search AJIO']<img data-featherlight="./../reports/images/735509665.png" width="10%" src="./../reports/images/735509665.png" data-src="./../reports/images/735509665.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:26:58 AM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:27:00 AM</td>
+					<td class='step-details'>The browser could not be closed</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:27:00 AM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 01:44:32 AM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 01:44:32 AM</span>
+	<span class='label end-time'>May 10, 2020 01:44:51 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:44:51 AM</td>
+					<td class='step-details'>Error communicating with the remote browser. It may have died. Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc' System info: host: 'JANAPALAA2', ip: '192.168.43.196', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_241' Driver info: driver.version: EventFiringWebDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: C:\Users\JANAPA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58277}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:virtualAuthenticators: true} Session ID: 8ee8d80b12ca63ac3ce3bddae87bd395</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:44:51 AM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 01:45:13 AM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 01:45:13 AM</span>
+	<span class='label end-time'>May 10, 2020 01:45:34 AM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:45:28 AM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/616847620.png" width="10%" src="./../reports/images/616847620.png" data-src="./../reports/images/616847620.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:45:29 AM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/597459580.png" width="10%" src="./../reports/images/597459580.png" data-src="./../reports/images/597459580.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:45:34 AM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 12:03:40 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 12:03:40 PM</span>
+	<span class='label end-time'>May 10, 2020 12:04:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:04:10 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/201219618.png" width="10%" src="./../reports/images/201219618.png" data-src="./../reports/images/201219618.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:04:11 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/56775310.png" width="10%" src="./../reports/images/56775310.png" data-src="./../reports/images/56775310.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:04:13 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //input[@placeholder='Search AJIO']not found.<img data-featherlight="./../reports/images/526755723.png" width="10%" src="./../reports/images/526755723.png" data-src="./../reports/images/526755723.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:04:13 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:04:13 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 12:31:30 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 12:31:30 PM</span>
+	<span class='label end-time'>May 10, 2020 12:37:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 6m 0s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:26 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/443946750.png" width="10%" src="./../reports/images/443946750.png" data-src="./../reports/images/443946750.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:28 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/15032971.png" width="10%" src="./../reports/images/15032971.png" data-src="./../reports/images/15032971.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:37:29 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //input[@placeholder='Search AJIO']not found.<img data-featherlight="./../reports/images/264000068.png" width="10%" src="./../reports/images/264000068.png" data-src="./../reports/images/264000068.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:37:29 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:30 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 12:42:41 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 12:42:41 PM</span>
+	<span class='label end-time'>May 10, 2020 12:43:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:42:57 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/849226273.png" width="10%" src="./../reports/images/849226273.png" data-src="./../reports/images/849226273.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:42:59 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/594883136.png" width="10%" src="./../reports/images/594883136.png" data-src="./../reports/images/594883136.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:00 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //input[@placeholder='Search AJIO']not found.<img data-featherlight="./../reports/images/500575949.png" width="10%" src="./../reports/images/500575949.png" data-src="./../reports/images/500575949.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:43:00 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:43:03 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 12:47:17 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 12:47:17 PM</span>
+	<span class='label end-time'>May 10, 2020 12:48:25 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 8s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:48:25 PM</td>
+					<td class='step-details'>Error communicating with the remote browser. It may have died. Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc' System info: host: 'JANAPALAA2', ip: '192.168.43.196', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_241' Driver info: driver.version: EventFiringWebDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: C:\Users\JANAPA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57196}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:virtualAuthenticators: true} Session ID: 2a363383cc1a923ac3e56f9e39f2f026</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:48:25 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 12:49:49 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 12:49:49 PM</span>
+	<span class='label end-time'>May 10, 2020 12:50:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:20 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/464650429.png" width="10%" src="./../reports/images/464650429.png" data-src="./../reports/images/464650429.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:21 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/789120414.png" width="10%" src="./../reports/images/789120414.png" data-src="./../reports/images/789120414.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:21 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //input[@placeholder='Search AJIO']not found.<img data-featherlight="./../reports/images/705213204.png" width="10%" src="./../reports/images/705213204.png" data-src="./../reports/images/705213204.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:50:21 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:22 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 12:50:38 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 12:50:38 PM</span>
+	<span class='label end-time'>May 10, 2020 12:51:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:02 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/431102792.png" width="10%" src="./../reports/images/431102792.png" data-src="./../reports/images/431102792.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:04 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/163185086.png" width="10%" src="./../reports/images/163185086.png" data-src="./../reports/images/163185086.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:05 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //input[@placeholder='Search AJIO']not found.<img data-featherlight="./../reports/images/496823458.png" width="10%" src="./../reports/images/496823458.png" data-src="./../reports/images/496823458.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:05 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:07 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 12:51:21 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 12:51:21 PM</span>
+	<span class='label end-time'>May 10, 2020 12:51:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 19s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:36 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/507902167.png" width="10%" src="./../reports/images/507902167.png" data-src="./../reports/images/507902167.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:38 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/399225250.png" width="10%" src="./../reports/images/399225250.png" data-src="./../reports/images/399225250.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:39 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //input[@placeholder='Search AJIO']not found.<img data-featherlight="./../reports/images/125079802.png" width="10%" src="./../reports/images/125079802.png" data-src="./../reports/images/125079802.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:51:39 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:40 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 12:53:11 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 12:53:11 PM</span>
+	<span class='label end-time'>May 10, 2020 12:54:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:20 PM</td>
+					<td class='step-details'>Error communicating with the remote browser. It may have died. Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc' System info: host: 'JANAPALAA2', ip: '192.168.43.196', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_241' Driver info: driver.version: EventFiringWebDriver Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.138, chrome: {chromedriverVersion: 81.0.4044.138 (8c6c7ba89cc9..., userDataDir: C:\Users\JANAPA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57882}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: accept, webauthn:virtualAuthenticators: true} Session ID: 96e3dab16a2a892bb31f965451cac8ea</td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:54:20 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 01:03:58 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 01:03:58 PM</span>
+	<span class='label end-time'>May 10, 2020 01:04:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:15 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/532500498.png" width="10%" src="./../reports/images/532500498.png" data-src="./../reports/images/532500498.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:16 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/394167741.png" width="10%" src="./../reports/images/394167741.png" data-src="./../reports/images/394167741.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:04:23 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 01:11:13 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 01:11:13 PM</span>
+	<span class='label end-time'>May 10, 2020 01:11:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:11:28 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/742866395.png" width="10%" src="./../reports/images/742866395.png" data-src="./../reports/images/742866395.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:11:30 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/460413731.png" width="10%" src="./../reports/images/460413731.png" data-src="./../reports/images/460413731.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:11:35 PM</td>
+					<td class='step-details'>The element: [[RemoteWebDriver: chrome on WINDOWS (cbf9ee8a7450fe1a6cd3f44a32f47d05)] -&gt; xpath: //label[text()='Sort By']] could not be found.<img data-featherlight="./../reports/images/738080252.png" width="10%" src="./../reports/images/738080252.png" data-src="./../reports/images/738080252.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:11:35 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:11:35 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 01:18:29 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 01:18:29 PM</span>
+	<span class='label end-time'>May 10, 2020 01:19:56 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 27s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:19:23 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/398585862.png" width="10%" src="./../reports/images/398585862.png" data-src="./../reports/images/398585862.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:19:24 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/70283300.png" width="10%" src="./../reports/images/70283300.png" data-src="./../reports/images/70283300.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:56 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //span[normalize-space(text())='Bags in']/following-sibling::span[text()='Women Handbags']not found.<img data-featherlight="./../reports/images/339270134.png" width="10%" src="./../reports/images/339270134.png" data-src="./../reports/images/339270134.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:19:56 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:19:56 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 01:22:02 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 01:22:02 PM</span>
+	<span class='label end-time'>May 10, 2020 01:23:40 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 38s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:23:07 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/201260741.png" width="10%" src="./../reports/images/201260741.png" data-src="./../reports/images/201260741.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:23:07 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/682386477.png" width="10%" src="./../reports/images/682386477.png" data-src="./../reports/images/682386477.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:23:39 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //span[normalize-space(text())='Bags in']/following-sibling::span[text()='Women Handbags']not found.<img data-featherlight="./../reports/images/783713757.png" width="10%" src="./../reports/images/783713757.png" data-src="./../reports/images/783713757.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:23:39 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:23:40 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 01:26:41 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 01:26:41 PM</span>
+	<span class='label end-time'>May 10, 2020 01:28:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 19s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:27:26 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/882675471.png" width="10%" src="./../reports/images/882675471.png" data-src="./../reports/images/882675471.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:27:29 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/273628210.png" width="10%" src="./../reports/images/273628210.png" data-src="./../reports/images/273628210.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:28:00 PM</td>
+					<td class='step-details'>The element: [[RemoteWebDriver: chrome on WINDOWS (a398a37c9f629f840fe0dd08dcbae8c6)] -&gt; xpath: //label[text()='Sort By']] could not be found.<img data-featherlight="./../reports/images/55076757.png" width="10%" src="./../reports/images/55076757.png" data-src="./../reports/images/55076757.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:28:00 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:28:00 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 01:49:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 01:49:36 PM</span>
+	<span class='label end-time'>May 10, 2020 01:50:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 36s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:55 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/444678410.png" width="10%" src="./../reports/images/444678410.png" data-src="./../reports/images/444678410.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:57 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/307039603.png" width="10%" src="./../reports/images/307039603.png" data-src="./../reports/images/307039603.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:50:12 PM</td>
+					<td class='step-details'>The dropdown is selected with text What's New<img data-featherlight="./../reports/images/883190787.png" width="10%" src="./../reports/images/883190787.png" data-src="./../reports/images/883190787.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:50:12 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 04:00:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 04:00:09 PM</span>
+	<span class='label end-time'>May 10, 2020 04:00:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:00:25 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/37651406.png" width="10%" src="./../reports/images/37651406.png" data-src="./../reports/images/37651406.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:00:27 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/340018446.png" width="10%" src="./../reports/images/340018446.png" data-src="./../reports/images/340018446.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:00:27 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 04:08:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 04:08:08 PM</span>
+	<span class='label end-time'>May 10, 2020 04:09:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 33s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:08:24 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/524160375.png" width="10%" src="./../reports/images/524160375.png" data-src="./../reports/images/524160375.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:08:26 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/630334832.png" width="10%" src="./../reports/images/630334832.png" data-src="./../reports/images/630334832.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:09:41 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 04:12:50 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 04:12:50 PM</span>
+	<span class='label end-time'>May 10, 2020 04:13:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:13:04 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/778766876.png" width="10%" src="./../reports/images/778766876.png" data-src="./../reports/images/778766876.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:13:06 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/513369360.png" width="10%" src="./../reports/images/513369360.png" data-src="./../reports/images/513369360.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:13:11 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 04:25:03 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 04:25:03 PM</span>
+	<span class='label end-time'>May 10, 2020 04:25:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:25:18 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/140137297.png" width="10%" src="./../reports/images/140137297.png" data-src="./../reports/images/140137297.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:25:20 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/676085347.png" width="10%" src="./../reports/images/676085347.png" data-src="./../reports/images/676085347.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:25:26 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 04:34:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 04:34:05 PM</span>
+	<span class='label end-time'>May 10, 2020 04:36:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 42s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:34:23 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/387609022.png" width="10%" src="./../reports/images/387609022.png" data-src="./../reports/images/387609022.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:34:25 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/492497387.png" width="10%" src="./../reports/images/492497387.png" data-src="./../reports/images/492497387.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>4:36:47 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 10:35:32 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 10:35:32 PM</span>
+	<span class='label end-time'>May 10, 2020 10:35:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:35:43 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/674817588.png" width="10%" src="./../reports/images/674817588.png" data-src="./../reports/images/674817588.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:35:44 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/314370281.png" width="10%" src="./../reports/images/314370281.png" data-src="./../reports/images/314370281.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:35:44 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 10:38:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 10:38:34 PM</span>
+	<span class='label end-time'>May 10, 2020 10:40:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 26s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:38:44 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/756084124.png" width="10%" src="./../reports/images/756084124.png" data-src="./../reports/images/756084124.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:38:45 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/348704044.png" width="10%" src="./../reports/images/348704044.png" data-src="./../reports/images/348704044.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:40:00 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 10:44:41 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 10:44:41 PM</span>
+	<span class='label end-time'>May 10, 2020 10:45:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 41s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:44:49 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/85504517.png" width="10%" src="./../reports/images/85504517.png" data-src="./../reports/images/85504517.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:44:49 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/29441903.png" width="10%" src="./../reports/images/29441903.png" data-src="./../reports/images/29441903.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>10:45:20 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //span[normalize-space(text())='Bags in']/following-sibling::span[text()='Women Handbags']not found.<img data-featherlight="./../reports/images/740008308.png" width="10%" src="./../reports/images/740008308.png" data-src="./../reports/images/740008308.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>10:45:20 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:45:22 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 10:46:53 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 10:46:53 PM</span>
+	<span class='label end-time'>May 10, 2020 10:47:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 55s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:47:07 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/896920552.png" width="10%" src="./../reports/images/896920552.png" data-src="./../reports/images/896920552.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:47:09 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/115019646.png" width="10%" src="./../reports/images/115019646.png" data-src="./../reports/images/115019646.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:47:15 PM</td>
+					<td class='step-details'>The dropdown is selected with text What's New<img data-featherlight="./../reports/images/587490339.png" width="10%" src="./../reports/images/587490339.png" data-src="./../reports/images/587490339.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>10:47:48 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //div[@class='prod-sp']not found.<img data-featherlight="./../reports/images/680476259.png" width="10%" src="./../reports/images/680476259.png" data-src="./../reports/images/680476259.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>10:47:48 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>10:47:48 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 11:05:43 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 11:05:43 PM</span>
+	<span class='label end-time'>May 10, 2020 11:06:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:55 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/229575932.png" width="10%" src="./../reports/images/229575932.png" data-src="./../reports/images/229575932.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:05:56 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/685815915.png" width="10%" src="./../reports/images/685815915.png" data-src="./../reports/images/685815915.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:06:27 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //span[normalize-space(text())='Bags in']/following-sibling::span[text()='Women Handbags']not found.<img data-featherlight="./../reports/images/97198076.png" width="10%" src="./../reports/images/97198076.png" data-src="./../reports/images/97198076.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:06:27 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:27 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 11:06:40 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 11:06:40 PM</span>
+	<span class='label end-time'>May 10, 2020 11:07:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 3s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:56 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/91533120.png" width="10%" src="./../reports/images/91533120.png" data-src="./../reports/images/91533120.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:06:57 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/273917200.png" width="10%" src="./../reports/images/273917200.png" data-src="./../reports/images/273917200.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:07 PM</td>
+					<td class='step-details'>The dropdown is selected with text What's New<img data-featherlight="./../reports/images/673741385.png" width="10%" src="./../reports/images/673741385.png" data-src="./../reports/images/673741385.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:07:43 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //span[text()='Change Pincode']not found.<img data-featherlight="./../reports/images/619822994.png" width="10%" src="./../reports/images/619822994.png" data-src="./../reports/images/619822994.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:07:43 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:07:43 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 11:27:17 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 11:27:17 PM</span>
+	<span class='label end-time'>May 10, 2020 11:33:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 6m 25s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:27:34 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/690226725.png" width="10%" src="./../reports/images/690226725.png" data-src="./../reports/images/690226725.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:27:35 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/245084708.png" width="10%" src="./../reports/images/245084708.png" data-src="./../reports/images/245084708.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:30:13 PM</td>
+					<td class='step-details'>The dropdown is selected with text What's New<img data-featherlight="./../reports/images/744793807.png" width="10%" src="./../reports/images/744793807.png" data-src="./../reports/images/744793807.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:33:36 PM</td>
+					<td class='step-details'>The element with locator: xpathand locator value: //span[text()='Change Pincode']not found.<img data-featherlight="./../reports/images/170771167.png" width="10%" src="./../reports/images/170771167.png" data-src="./../reports/images/170771167.png"></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>11:33:36 PM</td>
+					<td class='step-details'>Usage: BOLD TEXT</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:33:42 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 11:38:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 11:38:46 PM</span>
+	<span class='label end-time'>May 10, 2020 11:39:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 28s+0ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:39:01 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight="./../reports/images/383132265.png" width="10%" src="./../reports/images/383132265.png" data-src="./../reports/images/383132265.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:39:02 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight="./../reports/images/261066797.png" width="10%" src="./../reports/images/261066797.png" data-src="./../reports/images/261066797.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:39:12 PM</td>
+					<td class='step-details'>The dropdown is selected with text What's New<img data-featherlight="./../reports/images/78654334.png" width="10%" src="./../reports/images/78654334.png" data-src="./../reports/images/78654334.png"></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:39:14 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>TC_PsuedoCodeEvaluation</span>
+						<span class='test-time'>May 10, 2020 11:54:06 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>May 10, 2020 11:54:06 PM</span>
+	<span class='label end-time'>May 10, 2020 11:54:53 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 46s+699ms</span>
+</div>
+	<div class='test-desc'>Search Womens Hand Bag, filter out a product and add to card and then compare the discount matches, the delete from Cart </div>
+	<div class='test-attributes'>
+			<div class='category-list'>
+				<span class='category label white-text'>AjioTest</span>
+			</div>
+			<div class='author-list'>
+				<span class='author label white-text'>AjaySreedhar</span>
+			</div>
+	</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:21 PM</td>
+					<td class='step-details'>The browser loaded the URL https://www.ajio.com/shop/sale<img data-featherlight='./../reports/images/312873728.png' width='10%' src='./../reports/images/312873728.png' data-src='./../reports/images/312873728.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:23 PM</td>
+					<td class='step-details'>The browser: Chrome launched successfully<img data-featherlight='./../reports/images/816393478.png' width='10%' src='./../reports/images/816393478.png' data-src='./../reports/images/816393478.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:25 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //input[@placeholder='Search AJIO']] is visible<img data-featherlight='./../reports/images/707896152.png' width='10%' src='./../reports/images/707896152.png' data-src='./../reports/images/707896152.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:27 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //input[@placeholder='Search AJIO']] is Enabled<img data-featherlight='./../reports/images/289507973.png' width='10%' src='./../reports/images/289507973.png' data-src='./../reports/images/289507973.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:29 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //span[normalize-space(text())='Bags in']/following-sibling::span[text()='Women Handbags']] is visible<img data-featherlight='./../reports/images/452683567.png' width='10%' src='./../reports/images/452683567.png' data-src='./../reports/images/452683567.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:31 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //span[normalize-space(text())='Bags in']/following-sibling::span[text()='Women Handbags']] is Enabled<img data-featherlight='./../reports/images/611000855.png' width='10%' src='./../reports/images/611000855.png' data-src='./../reports/images/611000855.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:35 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //div[@class='five-grid']] is visible<img data-featherlight='./../reports/images/592519958.png' width='10%' src='./../reports/images/592519958.png' data-src='./../reports/images/592519958.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:35 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //div[@class='five-grid']] is Enabled<img data-featherlight='./../reports/images/524328491.png' width='10%' src='./../reports/images/524328491.png' data-src='./../reports/images/524328491.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:36 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //label[text()='Sort By']] is visible<img data-featherlight='./../reports/images/443982960.png' width='10%' src='./../reports/images/443982960.png' data-src='./../reports/images/443982960.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:37 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //label[text()='Sort By']] is Enabled<img data-featherlight='./../reports/images/771102006.png' width='10%' src='./../reports/images/771102006.png' data-src='./../reports/images/771102006.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:38 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //label[text()='Sort By']] is visible<img data-featherlight='./../reports/images/604750205.png' width='10%' src='./../reports/images/604750205.png' data-src='./../reports/images/604750205.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:38 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //label[text()='Sort By']] is Enabled<img data-featherlight='./../reports/images/99043190.png' width='10%' src='./../reports/images/99043190.png' data-src='./../reports/images/99043190.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:39 PM</td>
+					<td class='step-details'>The element [org.openqa.selenium.remote.RemoteWebElement@eb790ca6 -> unknown locator] is visible<img data-featherlight='./../reports/images/628871192.png' width='10%' src='./../reports/images/628871192.png' data-src='./../reports/images/628871192.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:40 PM</td>
+					<td class='step-details'>The element [org.openqa.selenium.remote.RemoteWebElement@eb790ca6 -> unknown locator] is Enabled<img data-featherlight='./../reports/images/669712836.png' width='10%' src='./../reports/images/669712836.png' data-src='./../reports/images/669712836.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:41 PM</td>
+					<td class='step-details'>The dropdown is selected with text What's New<img data-featherlight='./../reports/images/404370656.png' width='10%' src='./../reports/images/404370656.png' data-src='./../reports/images/404370656.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:42 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //span[text()='price']] is visible<img data-featherlight='./../reports/images/64465787.png' width='10%' src='./../reports/images/64465787.png' data-src='./../reports/images/64465787.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:42 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //span[text()='price']] is Enabled<img data-featherlight='./../reports/images/364932487.png' width='10%' src='./../reports/images/364932487.png' data-src='./../reports/images/364932487.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:43 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //input[@name='minPrice']] is visible<img data-featherlight='./../reports/images/549173102.png' width='10%' src='./../reports/images/549173102.png' data-src='./../reports/images/549173102.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:44 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //input[@name='minPrice']] is Enabled<img data-featherlight='./../reports/images/324850373.png' width='10%' src='./../reports/images/324850373.png' data-src='./../reports/images/324850373.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:45 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //input[@name='maxPrice']] is visible<img data-featherlight='./../reports/images/729229255.png' width='10%' src='./../reports/images/729229255.png' data-src='./../reports/images/729229255.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:46 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //input[@name='maxPrice']] is Enabled<img data-featherlight='./../reports/images/583240409.png' width='10%' src='./../reports/images/583240409.png' data-src='./../reports/images/583240409.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:47 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //span[contains(@class,'ic-price-separator')]/following-sibling::button[@type='submit']] is visible<img data-featherlight='./../reports/images/821956362.png' width='10%' src='./../reports/images/821956362.png' data-src='./../reports/images/821956362.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:48 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //span[contains(@class,'ic-price-separator')]/following-sibling::button[@type='submit']] is Enabled<img data-featherlight='./../reports/images/300569781.png' width='10%' src='./../reports/images/300569781.png' data-src='./../reports/images/300569781.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:50 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //div[text()='Ferrari LS Shoulder Bag']] is visible<img data-featherlight='./../reports/images/836011395.png' width='10%' src='./../reports/images/836011395.png' data-src='./../reports/images/836011395.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:50 PM</td>
+					<td class='step-details'>The element [[RemoteWebDriver: chrome on WINDOWS (d6ec5f8237039e326cbc805b105e0f60)] -> xpath: //div[text()='Ferrari LS Shoulder Bag']] is Enabled<img data-featherlight='./../reports/images/97806795.png' width='10%' src='./../reports/images/97806795.png' data-src='./../reports/images/97806795.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>11:54:53 PM</td>
+					<td class='step-details'>The browser is closed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<div id='category-view' class='view hide'>
+
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+				
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Categories</h3>
+			<ul id='category-collection' class='category-collection'>
+				
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>AjioTest</span>
+						<span class='category-status right'>
+							<span class='label pass'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							<span class='label green accent-4 white-text'>Passed: 1</span>
+							
+							
+						</div>
+					
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>May 10, 2020 11:54:06 PM</td>
+										<td class='linked' test-id='32'>TC_PsuedoCodeEvaluation</td>
+										<td><span class='test-status pass'>pass</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='category-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- category view -->
+<div id='author-view' class='view hide'>
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Authors' title='Search Authors'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Authors...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Authors</h5>
+                <ul id='author-collection' class='author-collection'>
+
+                        <li class='author displayed active'>
+                            <div class='author-heading'>
+                                <span class='author-name'>AjaySreedhar</span>
+                                <span class='author-status right'>
+                                        <span class='label pass'>1</span>
+						        </span>
+                            </div>
+                            <div class='author-content hide'>
+                                <div class='author-status-counts'>
+                                    <span class='label green accent-4 white-text'>Passed: 1</span>
+                                    
+                                    
+                                </div>
+
+                                <div class='author-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>May 10, 2020 11:54:06 PM</td>
+                                                <td class='linked' test-id='32'>TC_PsuedoCodeEvaluation</td>
+                                                <td><span class='test-status pass'>pass</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='author-name'></h5>
+        </div>
+    </div>
+</div>
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>32</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>154</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>May 10, 2020 11:54:05 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>May 10, 2020 11:54:53 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 0m 47s+487ms</div>
+				</div>
+			</div>
+			<div class='col s6'>
+				<div class='card-panel dashboard-categories'>
+					<span class='right label cyan white-text'>Categories</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Passed</th>
+							<th>Failed</th>
+							<th>Others</th>
+							<th>Passed %</th>
+						</tr>
+						<tr>
+							<td>AjioTest</td>
+							<td>1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>
+									100%
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 13,
+				failParent: 19,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 19,
+				
+				passChild: 114,
+				failChild: 40,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				exceptionsChild: 40,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		<script type='text/javascript'>
+			$(document).ready(function() {
+				$('#test-view-charts').addClass('hide');
+			});
+		</script>
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>
